@@ -4,14 +4,16 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
-  border: 2px solid #646cff;
+  border: 2px solid rgba(66, 11, 231, 0.87);
   border-radius: 10px;
-  background-color: #f9f9f9;
+  background-color: #151414;
 }
 
-.count {
-  font-size: 2em;
-  margin: 10px 0;
+.text{
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    margin: 10px 0;
+    color: white;
 }
 
 button {
@@ -22,8 +24,10 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  color: white;
+  background: rgba(66, 11, 231, 0.87);
 }
 
 button:hover {
-  background-color: #e0e0e0;
+  background-color: #780fda;
 }

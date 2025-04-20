@@ -16,6 +16,7 @@ const CounterContext = React.createContext<CounterContextData>({
 
 
 export const CounterContextProvider: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
+    //Any generalized logic around counter state can be added here
     const [count, setCount] = React.useState(0);
     const increment = () => setCount((prevCount) => prevCount + 1);
     const decrement = () => setCount((prevCount) => prevCount - 1);

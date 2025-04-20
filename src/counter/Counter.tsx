@@ -1,10 +1,10 @@
-import {useState} from 'react';
+import * as React from 'react';
 import styles from './Counter.module.scss';
-import * as React from "react";
+import {useCounter} from "./counter-context-provider.tsx";
 
 
 const Counter: React.FC = () => {
-    const [count, setCount] = useState(0);
+   const {count, increment, decrement, reset} = useCounter();
 
     return (
         <div className={styles.counter}>
@@ -12,9 +12,9 @@ const Counter: React.FC = () => {
             <p className={styles.text}>
                 {count}
             </p>
-            <button onClick={() => setCount(count + 1)}>Increment</button>
-            <button onClick={() => setCount(count - 1)}>Decrement</button>
-            <button onClick={() => setCount(0)}>Reset</button>
+            <button onClick={increment}>Increment</button>
+            <button onClick={decrement}>Decrement</button>
+            <button onClick={reset}>Reset</button>
         </div>
     );
 }
